@@ -1,0 +1,13 @@
+[Unit]
+Description=Keyboard Layout Autoswitch (Wayland friendly)
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=@@SCRIPT@@
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=default.target
